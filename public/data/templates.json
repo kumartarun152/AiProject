@@ -1,0 +1,4 @@
+[
+  { "id": "1", "title": "Story", "text": "Write a short story about AI." },
+  { "id": "2", "title": "Summary", "text": "Summarize the following text..." }
+]
