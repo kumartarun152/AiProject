@@ -10,7 +10,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* 🔹 Top Left Hamburger (jab sidebar closed ho) */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
@@ -20,7 +19,6 @@ export default function Sidebar() {
         </button>
       )}
 
-      {/* 🔹 Sidebar */}
       <AnimatePresence>
         {open && (
           <motion.aside
@@ -31,7 +29,6 @@ export default function Sidebar() {
             transition={{ duration: 0.3 }}
             className="w-60 bg-white  dark:bg-[rgb(33,33,33)] border-r dark:border-gray-700 p-4 fixed md:static top-0 left-0 h-full shadow-lg md:shadow-none z-40 flex flex-col"
           >
-            {/* Sidebar Header with Close Menu Icon */}
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold">Models</h2>
               <button
@@ -42,7 +39,6 @@ export default function Sidebar() {
               </button>
             </div>
 
-            {/* Models List (sirf text, no icon) */}
             <ul className="space-y-2">
               {models.map((m) => (
                 <li

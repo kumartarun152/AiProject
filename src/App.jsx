@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "./components/Sidebar";
-import ChatWindow from "./components/ChatWindow";
+import Sidebar from "./components/Sidebar/Sidebar";
+import ChatWindow from "./components/ChatWindow/ChatWindow";
 import Header from "./components/Header";
 
 export default function App() {

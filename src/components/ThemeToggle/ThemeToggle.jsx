@@ -23,7 +23,6 @@ export const ThemeToggle = () => {
       className="relative w-14 h-8 flex items-center rounded-full 
                  bg-gray-200 dark:bg-gray-800 p-1 transition-colors duration-300"
     >
-      {/* Toggle Circle */}
       <motion.div
         layout
         className="w-6 h-6 rounded-full flex items-center justify-center 
@@ -55,7 +54,6 @@ export const ThemeToggle = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* Circle Position */}
       <motion.div
         className="absolute top-1 left-1"
         animate={{

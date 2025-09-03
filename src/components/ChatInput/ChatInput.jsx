@@ -12,7 +12,6 @@ export default function ChatInput({ onSend }) {
     setText("");
   };
 
-  // Close toggle on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -25,14 +24,12 @@ export default function ChatInput({ onSend }) {
 
   return (
     <div className="p-4">
-      {/* Floating Input Bar */}
       <div
         ref={menuRef}
         className="flex items-center gap-2 max-w-3xl mx-auto w-full 
                    rounded-xl px-4 py-2 bg-white dark:bg-[rgb(33,33,33)] 
                    shadow-md border border-gray-200 dark:border-gray-700 relative"
       >
-        {/* Left + Button */}
         <button
           onClick={() => setOpenMenu(!openMenu)}
           className="p-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 transition relative"
@@ -40,7 +37,6 @@ export default function ChatInput({ onSend }) {
           <Plus size={20} />
         </button>
 
-        {/* Toggle Menu */}
         {openMenu && (
           <div className="absolute bottom-14 left-4 bg-white dark:bg-[rgb(33,33,33)] 
                           shadow-lg rounded-lg p-2 w-40 space-y-2 
@@ -54,7 +50,6 @@ export default function ChatInput({ onSend }) {
           </div>
         )}
 
-        {/* Input Field */}
         <input
           type="text"
           value={text}
@@ -66,7 +61,6 @@ export default function ChatInput({ onSend }) {
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
         />
 
-        {/* Mic Button */}
         <button
           onClick={() => alert("Voice input start hoga yaha")} // <- yaha pe mic recording logic add kar sakte ho
           className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition"
@@ -74,7 +68,6 @@ export default function ChatInput({ onSend }) {
           <Mic size={18} className="text-gray-600 dark:text-gray-300" />
         </button>
 
-        {/* Send Button */}
         <button
           onClick={handleSend}
           className="p-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition"
