@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ChatWindow from "./components/ChatWindow/ChatWindow";
-import Header from "./components/Header";
+import Header from "../src/components/Header";
 
 export default function App() {
   return (
